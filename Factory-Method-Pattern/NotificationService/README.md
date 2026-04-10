@@ -6,3 +6,7 @@
 
 ## 2. Why This Fits the Factory Method Pattern
 This is a perfect use case for the Factory Method pattern, as it allows the system to delegate object creation to subclasses while keeping the client decoupled from the concrete implementations.
+
+![alt text](<Factory method pattern explained visually.png>)
+
+![alt text](<Notification service class diagram.png>)
