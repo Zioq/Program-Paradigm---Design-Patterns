@@ -1,7 +1,7 @@
-import { clientCode } from "./CarFactoryMethod/client/clientCode";
-import { SUVFactory } from "./CarFactoryMethod/factories/SUVFactory";
-import { SedanFactory } from "./CarFactoryMethod/factories/SedanFactory";
-import { ElectricCarFactory } from "./CarFactoryMethod/factories/ElectricCarFactory";
+import { clientCode } from "./client/clientCode";
+import { SUVFactory } from "./factories/SUVFactory";
+import { SedanFactory } from "./factories/SedanFactory";
+import { ElectricCarFactory } from "./factories/ElectricCarFactory";
 
 
 
