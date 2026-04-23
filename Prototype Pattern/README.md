@@ -1,5 +1,7 @@
 ## Prototype 🍪(a.k.a clone)
 ![alt text](image.png)
+
+
 The **Prototype** design pattern is a creational pattern used when you want to create new objects by copying an existing object (the "prototype") rather than creating them from scratch using a constructor. This is particularly useful in TypeScript when object creation is expensive or *when you want to keep your code decoupled from the specific classes* of objects you need to clone. 🛠️
 
 In TypeScript, this pattern usually involves an interface with a `clone()` method.
@@ -186,7 +188,7 @@ It does not.
 TypeScript only changes the static type of the return value.
 It does not magically know how to construct the correct subclass instance.
 
-✅ **Safe Solutions**
+✅**Safe Solutions**
 
 Solution 1: Override clone() in each subclass -> This is the most direct and common fix.
 - Trade-off: You must remember to override clone() whenever a subclass adds new fields.
