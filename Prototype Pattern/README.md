@@ -187,6 +187,7 @@ TypeScript only changes the static type of the return value.
 It does not magically know how to construct the correct subclass instance.
 
 ✅ **Safe Solutions**
+
 Solution 1: Override clone() in each subclass -> This is the most direct and common fix.
 - Trade-off: You must remember to override clone() whenever a subclass adds new fields.
 
@@ -217,7 +218,8 @@ Avoid polymorphic this when:
 - subclasses are likely to add important state that is not copied
 - you are relying on as this to suppress errors
 
-Rule of Thumb
+**Rule of Thumb**
+
 Use `this` when:
 > “This method should return the same exact subtype as the caller.”
 
@@ -239,18 +241,19 @@ In other words:
 >The real difficulty of polymorphic this is not the syntax.
 >It is keeping the runtime behavior aligned with the type-level promise.
 
+
 **👍 Best Practices**
-1. Treat this as a contract, not a convenience
+1. Treat this as a contract, not a convenience.
 Only use it when you can fully honor subtype preservation.
 
-2. Be suspicious of as this
+2. Be suspicious of as this.
 It often means you are bypassing a real type mismatch.
 
-3. Override clone logic in subclasses when needed
+3. Override clone logic in subclasses when needed.
 If subclasses add new state, their clone logic usually must change too.
 
-4. Prefer abstract factory hooks for extensible hierarchies
+4. Prefer abstract factory hooks for extensible hierarchies.
 This makes subclass responsibilities explicit.
 
-5. Use this heavily in fluent APIs and builders
+5. Use this heavily in fluent APIs and builders.
 This is where it provides the most value and the least risk.
